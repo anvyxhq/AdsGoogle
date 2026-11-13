@@ -4,7 +4,7 @@ The Google Mobile Ads (AdMob) adapter for [AdsKit](https://github.com/anvyxhq/Ad
 It implements `AdsCore`'s provider-agnostic protocols, so your screens depend only
 on `AdManaging` while the SDK stays isolated here.
 
-[![Swift](https://img.shields.io/badge/Swift-5.9+-orange.svg)](https://swift.org)
+[![Swift](https://img.shields.io/badge/Swift-6.2+-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/iOS-16%2B-blue.svg)](https://developer.apple.com/ios/)
 [![SPM](https://img.shields.io/badge/SPM-compatible-brightgreen.svg)](https://swift.org/package-manager/)
 
@@ -21,6 +21,8 @@ on `AdManaging` while the SDK stays isolated here.
 ```swift
 .package(url: "https://github.com/anvyxhq/AdsGoogle.git", branch: "main")
 ```
+
+> The latest tagged release predates the current `Anvyx*` module names, so depend on `main` until the next tagged release.
 
 This transitively pulls in `AdsKit` (the `AdsCore` abstraction) and the Google
 Mobile Ads SDK. Add your AdMob **App ID** to `Info.plist` (`GADApplicationIdentifier`).
@@ -56,7 +58,7 @@ BannerAdView { GoogleBannerFactory.make(unitID: AdConfiguration.test.bannerID!) 
 
 ## Requirements
 
-- iOS 16+ · Swift 5.9+ · Google Mobile Ads SDK 13+
+- iOS 16+ · Swift 6.2+ (Xcode 26+) · Google Mobile Ads SDK 13+
 
 ## License
 
